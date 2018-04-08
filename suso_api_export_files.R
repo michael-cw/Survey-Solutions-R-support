@@ -10,19 +10,6 @@
 ##    v) Uses data.table
 ##    vi) Version includes re-load time in SECONDS
 ########################################################################################
-## Load the libraries
-library("httr")
-library("xml2")
-library("jsonlite")
-library("haven")
-library("data.table")
-library("plyr")
-library("dplyr")
-library("stringdist")
-library("readstata13")
-
-###################################################################################
-##  CURRENT QUESTIONNAIRE IS
 
 fileCollector<-function(questName="",
                         server= "xxx.mysurvey.solutions",
@@ -34,12 +21,19 @@ fileCollector<-function(questName="",
                         reloadTimeDiff=0,
                         inShinyApp=F){
   #######################################
+  ## Load the libraries
+  library("httr")
+  library("xml2")
+  library("jsonlite")
+  library("haven")
+  library("data.table")
+  library("plyr")
+  library("dplyr")
+  library("stringdist")
+  
+  #######################################
   ##  Update DETAILS
-<<<<<<< HEAD
   source("suso_api_export_details.R")
-=======
-  source("api_details.R")
->>>>>>> 17e35cbfcd26658ccf7ffb5848141646350bd7c6
   ##  OPTIONS: i) No scientific notation
   options("scipen"=100, "digits"=4)
   url<-paste0(server, "/api/v1/export/")
