@@ -1,15 +1,6 @@
 ##################################################
-##  API file for:
+##  API Assignment Creation
 #################################################
-# https://gabon1.mysurvey.solutions/api/DataExportApi/AllData/
-#  3dcc4ce9-8393-4d38-9cfd-fea95d7fd573?version=1&format=STATA&status=null"
-
-
-## Load the libraries
-library("httr")
-library("xml2")
-library("jsonlite")
-library("readstata13")
 
 createASS<-function(df=UPLOADdataCHECK,
                     url="https://xxx.mysurvey.solutions",
@@ -17,7 +8,6 @@ createASS<-function(df=UPLOADdataCHECK,
                     pass="",
                     QUID = NULL,
                     version =NULL){
-  ## LIB
   ## Load the libraries
   library("httr")
   library("xml2")
