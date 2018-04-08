@@ -2,15 +2,16 @@
 ## API USER management
 
 
-## Load the libraries
-library("httr")
-library("xml2")
-library("jsonlite")
-library("readstata13")
+
 
 getSV<-function(url="https://xx.mysurvey.solutions",
                 usr="ApiUser",
                 pass="ApiPass"){
+  ## Load the libraries
+  library("httr")
+  library("xml2")
+  library("jsonlite")
+  
   ##  Define the api 
   url=paste0(url, "/api/v1/supervisors")
   print(url)
@@ -30,6 +31,11 @@ getINT<-function(url="https://xx.mysurvey.solutions",
                  usr="ApiUser",
                  pass="ApiPass",
                  sv="sv_id"){
+  ## Load the libraries
+  library("httr")
+  library("xml2")
+  library("jsonlite")
+  
   ##  Define the api 
   url=paste0(url, "/api/v1/supervisors/")
   test_detail<-GET(url = paste0(url,sv,"/interviewers?limit=200"), 
